@@ -13,6 +13,8 @@
 		5A865ACB2512101E0078D85B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A865AC92512101E0078D85B /* Main.storyboard */; };
 		5A865ACD251210220078D85B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A865ACC251210220078D85B /* Assets.xcassets */; };
 		5A865AD0251210220078D85B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A865ACE251210220078D85B /* LaunchScreen.storyboard */; };
+		5A865AD82512134A0078D85B /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A865AD72512134A0078D85B /* GameScene.swift */; };
+		5A865ADA25189C460078D85B /* pickUpItem.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5A865AD925189C460078D85B /* pickUpItem.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		5A865ACC251210220078D85B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A865ACF251210220078D85B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A865AD1251210220078D85B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A865AD72512134A0078D85B /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		5A865AD925189C460078D85B /* pickUpItem.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pickUpItem.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,7 @@
 			children = (
 				5A865AC22512101E0078D85B /* FlappyBird */,
 				5A865AC12512101E0078D85B /* Products */,
+				5A865AD925189C460078D85B /* pickUpItem.mp3 */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +64,7 @@
 				5A865AC32512101E0078D85B /* AppDelegate.swift */,
 				5A865AC52512101E0078D85B /* SceneDelegate.swift */,
 				5A865AC72512101E0078D85B /* ViewController.swift */,
+				5A865AD72512134A0078D85B /* GameScene.swift */,
 				5A865AC92512101E0078D85B /* Main.storyboard */,
 				5A865ACC251210220078D85B /* Assets.xcassets */,
 				5A865ACE251210220078D85B /* LaunchScreen.storyboard */,
@@ -127,6 +133,7 @@
 			files = (
 				5A865AD0251210220078D85B /* LaunchScreen.storyboard in Resources */,
 				5A865ACD251210220078D85B /* Assets.xcassets in Resources */,
+				5A865ADA25189C460078D85B /* pickUpItem.mp3 in Resources */,
 				5A865ACB2512101E0078D85B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +147,7 @@
 			files = (
 				5A865AC82512101E0078D85B /* ViewController.swift in Sources */,
 				5A865AC42512101E0078D85B /* AppDelegate.swift in Sources */,
+				5A865AD82512134A0078D85B /* GameScene.swift in Sources */,
 				5A865AC62512101E0078D85B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,7 +301,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.shuya.watanabe.FlappyBird;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -310,7 +318,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.shuya.watanabe.FlappyBird;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
