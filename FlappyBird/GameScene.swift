@@ -30,6 +30,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var bestScoreLabelNode: SKLabelNode!
     var itemLabelNode: SKLabelNode!
     let userDefaults: UserDefaults = UserDefaults.standard
+    
+    let pickUpItemAudio = SKAction.playSoundFileNamed("pickUpItem", waitForCompletion: false)
+    
+    
  
     override func didMove(to view: SKView) {
         
@@ -194,6 +198,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             //　物理演算を設定
             under.physicsBody = SKPhysicsBody(rectangleOf: wallTexture.size())
+            under.physicsBody?.categoryBitMask = self.wallCategory
             
             // 動かないように設定
             under.physicsBody?.isDynamic = false
@@ -207,6 +212,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             //　物理演算を設定
             upper.physicsBody = SKPhysicsBody(rectangleOf: wallTexture.size())
+            upper.physicsBody?.categoryBitMask = self.wallCategory
             
             // 動かないように設定
             upper.physicsBody?.isDynamic = false
@@ -358,8 +364,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if scrollNode.speed <= 0 {
             return
         }
-        
-        let pickUpItemAudio = SKAction.playSoundFileNamed("pickUpItem", waitForCompletion: false)
         
         if (contact.bodyA.categoryBitMask & scoreCategory) == scoreCategory || (contact.bodyB.categoryBitMask & scoreCategory) == scoreCategory {
             //　スコア用の物体と衝突した
